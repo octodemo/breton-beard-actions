@@ -1,10 +1,2 @@
 # breton-beard-actions
-A repo where Breton and Beard play with GitHub Actions.
-
-Making a change to the repo.
-
-testing 
-
-making a change! 
-
-another one.
+A repo where Breton and Beard tinker with GitHub Actions.
