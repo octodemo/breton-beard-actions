@@ -23,11 +23,11 @@ on:
                 - everyone
 jobs:
     hello:
-        runs-on: linux-medium-capacity
+        runs-on: larger-32
         steps:
         - run: echo "Hello ${{ github.event.inputs.helloWhere }}"
     goodbye:
-        runs-on: ubuntu-latest
+        runs-on: larger-32
         steps:
         - run: echo "Goodbye ${{ github.event.inputs.goodbyeWhere }}"
         needs: hello
