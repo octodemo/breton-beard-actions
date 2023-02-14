@@ -23,7 +23,7 @@ on:
                 - everyone
 jobs:
     hello:
-        runs-on: ubuntu-latest
+        runs-on: linux-medium-capacity
         steps:
         - run: echo "Hello ${{ github.event.inputs.helloWhere }}"
     goodbye:
