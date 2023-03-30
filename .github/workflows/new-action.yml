@@ -1,0 +1,33 @@
+name: new-hello
+on:
+    workflow_dispatch:
+        inputs:
+            helloWhere:
+                description: 'Who do you want to say hello to?'
+                required: true
+                default: 'world'
+                type: choice
+                options:
+                - world
+                - beard
+                - breton
+                - everyone
+            goodbyeWhere:
+                description: 'Who do you want to say goodbye to?'
+                default: 'world'
+                type: choice
+                options:
+                - world
+                - beard
+                - breton
+                - everyone    
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+        - run: echo "Hello ${{ github.event.inputs.helloWhere }}"
+    goodbye:
+        runs-on: ubuntu-latest
+        needs: hello
+        steps:
+        - run: echo "Goodbye ${{ github.event.inputs.goodbyeWhere }}"
