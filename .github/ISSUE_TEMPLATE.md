@@ -1,6 +1,6 @@
 ---
 title: Someone just pushed a commit 🎉
-assignees: beardofedu, breton16
+assignees: beardofedu
 labels: bug, enhancement
 ---
 Someone just pushed a commit! Here's who did it: @{{ payload.sender.login }}.
